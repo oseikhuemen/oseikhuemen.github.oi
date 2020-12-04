@@ -1,0 +1,168 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Course| Edu Home</title>
+    <link rel="stylesheet" href="{% static 'CSS/style.css'%}">
+    <link rel="stylesheet" href="{% static 'CSS/bootstrap.min.css'%}">
+    <style type="text/css">
+      .textarea.form-control{
+          height: 80px !important;
+          }
+
+     label.requiredField{
+          font-weight: bold;
+          color: white;
+      }
+      .asteriskField{
+        display: none;
+      }
+
+      @media(max-width: 767px){
+        #fod{
+          margin-bottom: 18px;
+        }
+
+        .gat{
+          width: 70%;
+          
+        }
+
+        .get{
+          font-size: 10px;
+         }
+
+        .fuu{
+          height: 225px;
+         }
+   }
+        
+    </style>
+</head>
+
+<header>
+    <section>
+            <div class="container fixed-top col-12">
+                <div class="row">
+                    <div class="col-md-4" id="fod">
+                        <a class="ma" >Edu Home</a>
+                    </div>
+                        <div class="col ">
+                            <nav class="navbar navbar-expand-lg navbar-light">
+                                
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" 
+                                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="border-color: red; background-color: cornsilk; height: 30px; margin-left: 90%; margin-top: -50px; margin-bottom: 15px;">
+                                </button>
+                                <div class="collapse navbar-collapse eat" id="navbarNavAltMarkup">
+                                  <div class="navbar-nav dan" >
+                                    <a class="nav-item   emer" href="{% url 'index'%}">Home</a>
+                                    <a class="nav-item  active emer" href="{% url 'schedule'%}">Schedules </a>
+                                    <a class="nav-item  active emer" href="{% url 'question'%}">Ask Questions <span class="sr-only">(current)</span></a>
+                                    <a class="nav-item  active emer" href="{% url 'contact'%}">Contact us   <span class="sr-only">(current)</span></a>
+                                    <li class="nav-item dropdown ">
+                                        <a class="nav-link dropdown-toggle emer" style="color: black; padding-top: 0px;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                                            {{user.username}}
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: rgb(132, 19, 238);">
+                                          <a class="dropdown-item" style="font-weight: bold;" href="#">Change Password</a>
+                                          <div class="dropdown-divider"></div>
+                                          <a class="dropdown-item" style="font-weight: bold;" href="{% url 'logout'%}">Log Out</a>
+                                        </div>
+                                      </li>
+                                  </div>
+                                </div>
+                              </nav>
+                        </div>
+                    
+                </div>
+            </div>
+    </section>
+</header>
+
+<body>
+<section style="background-color: rgba(40, 243, 84, 0.705);">
+  <center>
+  <div class="">
+    <img src="./image/four.jpeg" alt="" srcset="" style="width: 100%; height: 105px;">
+    <video auto-plays controls  class="fuu" style="width: 80%; height: 550px; margin-bottom: 20px; margin-top: 20px;">
+        <source src="{{qs.video.url}}" type="video/mp4">
+    </video>
+    <h1 style="margin-top: 30px; padding-bottom: 8px;">Assigment</h1>
+    <div class="card gat" style="width: 530px; margin-bottom: 10px;">
+      <div class="card-body" >
+        <p class="get" style="font-weight: normal; font-size: 23px;"> {{qs.question}}</p>
+      </div>
+    </div>
+    
+</div>
+<div class="row ma"></div>
+    <div class="col-5 ">
+        <form method ="Post" >
+            {% csrf_token %}
+            {{ content|crispy }}
+    
+            <button type="submit" class="btn btn-primary" style="margin-bottom: 20px;"> submit </button>
+         </form>
+    </div>
+  </div>
+  </center>
+</section>
+</body>
+
+<footer>
+    <section>
+    <div class="container col-12">
+    <div class="row">
+     <div class="col boy mom">
+     <h2 style="margin-top: 20px;">
+     Partnership
+     </h2>
+     <h5 class="vol">We are open to collaboration and partnerships with well meaningful individuals</h5>
+    </div>
+    </section>
+            
+    <section>
+<div class="container col-12 " style="background-color: black;">
+    <div class="row">
+            <div class="w-100"></div>
+                <div class="col girl">
+                  About us
+                  <p class="jar">Over the years, failure rate in English Language and General
+                      Mathematics has been comparatively higher than it is with other school......
+                  </p>
+                  <button class="button"><a href="{% url 'about'%}" class="so">Button </a></button>
+                </div>
+                <div class="col girl">
+                  More Links
+                  <ul class="ink" style="cursor: pointer">
+                        <li>  <i class=" fa fa-home"></i> <a class="bubu" href="{% url 'index'%}">Home </a></li>
+                        <li>  <i class=" fa fa-phone"></i><a class="bubu" href="{% url 'about'%}"> About us </a></li>
+                        <li>  <i class=" fa fa-phone"></i><a class="bubu" href="{% url 'registration'%}"> Registration </a></li>
+                        <li>  <i class=" fa fa-phone"></i><a class="bubu" href="{% url 'schedule'%}"> Schedules </a></li>
+                        <li>  <i class=" fa fa-phone"></i><a class="bubu" href="{% url 'contact'%}"> Contact us </a></li>
+                      </ul>
+                </div>
+                <div class="col girl hil">
+                    Reach us <br>
+                    <p class="ink jar"> <i class=" fa fa-home"></i> EfexO2 Building,<br>
+                      Same Tantalizer Building <br>
+                      Beside Ecobank <br>
+                      Uselu Shell, Along Ugbowo <br>
+                      Lagos Road, Benin City, <br>
+                      Edo State. <br>
+                      <i class=" fa fa-phone"></i> 08157513979</p>    
+                  </div>
+              </div>
+            </div>
+            </div>
+            </div>
+    </section>
+              
+    <script src="{% static 'jquery/jquery.min.js'%}"></script>
+    <script src="{% static 'jquery/bootstrap.min.js'%}"></script>
+</footer>
+</html>

@@ -1,0 +1,260 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home | Edu Home</title>
+    <link rel="stylesheet" href="{% static 'CSS/style.css'%}">
+    <link rel="stylesheet" href="{% static 'CSS/bootstrap.min.css'%}">
+    <style type="text/css">
+      .textarea.form-control{
+          height: 80px !important;
+          }
+
+     label.requiredField{
+          font-weight: bold;
+          color: white;
+      }
+      
+      .form-text {
+          font-weight: bold;
+          color: rgb(0, 0, 0);
+      }
+
+      .osas{
+            margin-left: 250px;
+            padding-top: 40px ;
+            padding-bottom: 40px ;
+            padding-left: 50px ;
+            padding-right: 50px ;
+            background-color: white;
+            font-size: 40px;
+            font-weight: bold;
+            border-radius: 80px;
+      }
+
+      .osi{
+            margin-left: 300px;
+            padding-top: 40px ;
+            padding-bottom: 40px ;
+            padding-left: 50px ;
+            padding-right: 50px ;
+            background-color: white;
+            font-size: 40px;
+            font-weight: bold;
+            border-radius: 80px;
+      }
+      @media(max-width: 767px){
+        .osas{
+        margin-left: 100px;
+        padding-top: 20px ;
+        padding-bottom: 20px ;
+        padding-left: 25px ;
+        padding-right: 25px ;
+        background-color: white;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 80px;
+  }
+
+  .osi{
+        margin-left: 100px;
+        padding-top: 20px ;
+        padding-bottom: 20px ;
+        padding-left: 25px ;
+        padding-right: 25px ;
+        background-color: white;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 80px;
+  }
+
+    #tom{
+        height: 200px;
+        width: 300px;
+    }
+  }
+    </style>
+</head>
+
+<header>
+    <section>
+        <div class="container fixed-top col-12">
+            <div class="row">
+                <div class="col-md-4" id="fod">
+                    <a class="ma" >Edu Home</a>
+                </div>
+                    <div class="col ">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" 
+                            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="border-color: red; background-color: cornsilk; height: 30px; margin-left: 90%; margin-top: -50px; margin-bottom: 15px;">
+                            </button>
+                            <div class="collapse navbar-collapse eat" id="navbarNavAltMarkup">
+                              <div class="navbar-nav dan" >
+                                <a class="nav-item   emer" href="{% url 'index'%}">Home</a>
+                                <a class="nav-item  active emer" href="{% url 'schedule'%}">Schedules </a>
+                                <a class="nav-item  active emer" href="{% url 'question'%}">Ask Questions <span class="sr-only">(current)</span></a>
+                                <a class="nav-item  active emer" href="{% url 'contact'%}">Contact us   <span class="sr-only">(current)</span></a>
+                              </div>
+                            </div>
+                          </nav>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+</header>
+
+<body>
+   <section>
+    <center>
+      <div class="container net mt-5 col-12 align-items-center">
+          <center>
+              <div>
+                  <div class="col-12" style="padding-top: 90px;">
+                      <h1 style="font-size: 40px; font-weight: bold; margin-top: 50px; color:rgb(251, 255, 0);">Our Mission</h1>
+                      <h1 style="font-size: 20px; font-weight: bold; margin-top: 30px; margin-bottom: 150px; color:rgb(255, 255, 255); margin-right: 80px; margin-left: 80px;"> Is to educate exam year students annually so that they can do well academically and provide firm foundation for their future career choice </h1>
+                    </div>
+              </div>
+              
+            </center>
+                   >
+   </section> 
+
+   <section>
+    <center>
+      <div>
+          <div class="col-12" style="padding-top: 90px;">
+              <h1 style="font-size: 40px; font-weight: bold; margin-top: 50px; color:rgb(92, 2, 110);">Our Vision</h1>
+              <h1 style="font-size: 20px; font-weight: bold; margin-top: 30px; margin-bottom: 150px;"> Is to be the leading platform, providing access to standard and quality lectures across West Africa</h1>
+            </div>
+      </div>
+      
+    </center>
+   </section> 
+
+   <section>
+  
+<div class="di">
+    <center> 
+    <div class="col-12" style="padding-top: 70px; color: rgb(255, 255, 255); ">
+        <h1 style="font-size: 40px; font-weight: bold">How It Works</h1>
+        <h1 style="font-size: 30px; font-weight: normal"> Begin your journey by these four very simple steps</h1>
+      </div>
+      <center> 
+    <p>
+      <a class="btn cut" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">1</a>
+      <button class="btn cut" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">2</button>
+      <button class="btn cut" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">3</button>
+      <button class="btn cut" type="button" data-toggle="collapse" data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">4</button>    
+    </p>
+         <center>
+    <div class="row col">
+      <div class="col ml-5">
+        <div class="collapse multi-collapse" id="multiCollapseExample1">
+          <div class="card card-body" id="tom"  >
+            If you are new to this site click on the Register
+            button to create a profile but if you already
+            have a profile, click on the Log in button and log in.
+          </div>
+        </div>
+      </div>
+      <div class="col" >
+        <div class="collapse multi-collapse" id="multiCollapseExample2">
+          <div class="card card-body" id="tom" >
+              Check schedule tabs to view the course table of various
+              foundational subjects and topic, what time the class
+               starts then login at the proposed time to partake.
+          </div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="collapse multi-collapse" id="multiCollapseExample3">
+          <div class="card card-body" id="tom">
+            After watching videos submit answers to tasks given by the instructor,
+            only persons who submit assignments can have access to the next class
+          </div>
+          </div>
+      </div>
+      <div class="col mr-5">
+        <div class="collapse multi-collapse" id="multiCollapseExample4">
+          <div class="card card-body" id="tom">
+          You can contact us virtually with our contact form and we will reply 
+          your complaints as soon as possible and you can also send us questions
+          via our ask questions form on any subject of any course and we will get
+          you effective educational materials to aid your understanding.
+          </div>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+  </center>
+   </section>
+
+   <section class="dub ">
+      <button type="button" class="btn osas"> <a href="{% url 'registration'%}" style="text-decoration: none;"> Register </a></button>
+      <button type="button" class="btn osi"> <a href="{% url 'login'%}" style="text-decoration: none;"> Log In </a></button>
+    </section>
+   
+</body>
+<footer>
+<section>
+    <div class="container col-12">
+        <div class="row">
+          <div class="col boy mom">
+            <h2 style="margin-top: 20px;">
+              Partnership
+            </h2>
+            <h5 class="vol">We are open to collaboration and partnerships with well meaningful individuals</h5>
+          </div>
+</section>
+
+<section>
+  <div class="container col-12 " style="background-color: black;">
+    <div class="row">
+    <div class="w-100"></div>
+    <div class="col girl">
+      About us
+      <p class="jar">Over the years, failure rate in English Language and General
+          Mathematics has been comparatively higher than it is with other school......
+      </p>
+      <button class="button"><a href="{% url 'about'%}" class="so">Button </a></button>
+    </div>
+    <div class="col girl">
+      More Links
+      <ul class="ink" style="cursor: pointer">
+          <li>  <i class=" fa fa-home"></i> <a class="bubu" href="{% url 'index'%}">Home </a></li>
+          <li>  <i class=" fa fa-phone"></i><a class="bubu" href="{% url 'about'%}"> About us </a></li>
+          <li>  <i class=" fa fa-phone"></i><a class="bubu" href="{% url 'registration'%}"> Registration </a></li>
+          <li>  <i class=" fa fa-phone"></i><a class="bubu" href="{% url 'schedule'%}"> Schedules </a></li>
+          <li>  <i class=" fa fa-phone"></i><a class="bubu" href="{% url 'contact'%}"> Contact us </a></li>
+        </ul>
+    </div>
+    <div class="col girl hil">
+      Reach us <br>
+      <p class="ink jar"> <i class=" fa fa-home"></i> EfexO2 Building,<br>
+        Same Tantalizer Building <br>
+        Beside Ecobank <br>
+        Uselu Shell, Along Ugbowo <br>
+        Lagos Road, Benin City, <br>
+        Edo State. <br>
+        <i class=" fa fa-phone"></i> 08157513979</p>    
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+<script src="{% static 'jquery/jquery.min.js'%}"></script>
+<script src="{% static 'jquery/bootstrap.min.js'%}"></script>
+</footer>
+</html>
